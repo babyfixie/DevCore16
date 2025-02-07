@@ -1,0 +1,172 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 212px;
+    padding-top: 281px;
+    padding-bottom: 32px;
+    margin: 0;
+}
+
+.hero-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    width: 343px;
+    height: 250px;
+}
+
+.hero-soc-list {
+    display: flex;
+    color: #fafafa;
+    gap: 4px;
+}
+
+.hero-soc-list li {
+    position: relative;
+    transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-soc-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    text-decoration: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-soc-list li:not(:last-child) a {
+    width: 37px;
+    height: 37px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.hero-soc-list li:last-child a {
+    width: 178px;
+    height: 37px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        text-transform: lowercase;
+}
+
+
+
+.hero-soc-list li:hover a {
+    background-color: rgba(250, 250, 250, 0.1);
+    color: #ed3b44;;
+}
+
+
+
+.hero-wrapper {
+    position: absolute;
+    z-index: -1;
+    width: 310px;
+    height: 812px;
+    background-image:linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgba(28, 29, 32, 0.2)),
+        url('../img/hero/hero-mob-2x.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0px 32px;
+    }
+
+        .hero-wrapper {
+            height: 1024px;
+            width: 582px;
+            background-image: linear-gradient(to right,
+                    rgba(255, 255, 255, 0),
+                    rgba(28, 29, 32, 0.2)),
+                url('../img/hero/hero-tablet-2x.webp');
+        }
+
+                .hero-container {
+                    align-items:first baseline;
+                    gap: 187px;
+                    padding-top: 300px;
+                }
+
+                .hero-title {
+                    
+                    font-size: 90px;
+                    width: 632px;
+                    height: 450px;
+                }
+
+                .hero-soc-list {
+                    gap: 8px;
+                    margin-left: auto;
+
+                }
+
+                .hero-soc-list li a {
+                    padding-top: 18px;
+                    font-size: 16px; 
+                }
+        
+                .hero-soc-list li:not(:last-child) a {
+                    width: 55px;
+                    height: 55px;
+                }
+        
+                .hero-soc-list li:last-child a {
+                    width: 223px;
+                    height: 55px;
+                    font-size: 16px;
+                }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+
+        .hero-wrapper {
+            height: 900px;
+            width: 728px;
+            background-image: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+                    rgba(28, 29, 32, 0.2)),
+                url('../img/hero/hero-desk-2x.webp');
+               
+                /* background-position: left; */
+        }
+    
+        .hero-container {
+            align-items: center;
+            gap: 243px;
+        }
+    
+        .hero-title {
+            width: 1084px;
+            height: 270px;
+        }
+    
+       
+
+}

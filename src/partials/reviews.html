@@ -1,8 +1,8 @@
-<section class="section-reviews" id="reviews">
+<section class="section-reviews" id="reviews" aria-label="reviews-section">
   <div class="container">
     <h2 class="reviews-section-title">REVİEWS</h2>
-    <swiper-container class="reviews-swiper-container" init="false">
-      <swiper-slide class="reviews-item" lazy="true">
+    <div class="reviews-swiper-container swiper">
+      <!-- <swiper-slide class="reviews-item" lazy="true">
         <div class="reviews-image-container">
           <img
             src=""
@@ -85,13 +85,20 @@
         </div>
         <h3 class="reviews-user-name"></h3>
         <p class="reviews-text"></p>
-      </swiper-slide>
-    </swiper-container>
-    <div class="reviews-swiper-button">
-      <!--<div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>----->
-      <button class="reviews-button-prev" type="button"></button>
-      <button class="reviews-button-next" type="button"></button>
+      </swiper-slide> -->
+      <ul class="reviews-list swiper-wrapper"></ul>
+      <div class="reviews-swiper-button">
+        <button class="reviews-button-prev swiper-button-prev">
+          <svg class="prev-btn-icon" width="24" height="24">
+            <use href="../img/svg/icons.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="reviews-button-next swiper-button-next">
+          <svg class="next-btn-icon" width="24" height="24">
+            <use href="../img/svg/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>

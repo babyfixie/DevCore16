@@ -1,45 +1,68 @@
+import eng1x from '../img/covers/eng-1x.png';
+import eng2x from '../img/covers/eng-2x.png';
+import powerpulse1x from '../img/covers/powerpulse-1x.png';
+import powerpulse2x from '../img/covers/powerpulse-2x.png';
+import energy1x from '../img/covers/energy-1x.png';
+import energy2x from '../img/covers/energy-2x.png';
+import wallet1x from '../img/covers/wallet-1x.png';
+import wallet2x from '../img/covers/wallet-2x.png';
+import greenharvest1x from '../img/covers/greenharvest-1x.png';
+import greenharvest2x from '../img/covers/greenharvest-2x.png';
+import starlight1x from '../img/covers/starlight-1x.png';
+import starlight2x from '../img/covers/starlight-2x.png';
+import fruitbox1x from '../img/covers/fruitbox-1x.png';
+import fruitbox2x from '../img/covers/fruitbox-2x.png';
+import chego1x from '../img/covers/chego-1x.png';
+import chego2x from '../img/covers/chego-2x.png';
+import ukrainian1x from '../img/covers/ukrainian-1x.png';
+import ukrainian2x from '../img/covers/ukrainian-2x.png';
+import mimino1x from '../img/covers/mimino-1x.png';
+import mimino2x from '../img/covers/mimino-2x.png';
+
 const images = {
   eng: {
-    srcset: '../img/covers/eng-1x.png',
-    src: '../img/covers/eng-2x.png',
+    srcset: eng1x,
+    src: eng2x,
   },
   powerpulse: {
-    srcset: '../img/covers/powerpulse-1x.png',
-    src: '../img/covers/powerpulse-2x.png',
+    srcset: powerpulse1x,
+    src: powerpulse2x,
   },
   energy: {
-    srcset: '../img/covers/energy-1x.png',
-    src: '../img/covers/energy-2x.png',
+    srcset: energy1x,
+    src: energy2x,
   },
   wallet: {
-    srcset: '../img/covers/wallet-1x.png',
-    src: '../img/covers/wallet-2x.png',
+    srcset: wallet1x,
+    src: wallet2x,
   },
   green: {
-    srcset: '../img/covers/greenharvest-1x.png',
-    src: '../img/covers/greenharvest-2x.png',
+    srcset: greenharvest1x,
+    src: greenharvest2x,
   },
   starlight: {
-    srcset: '../img/covers/starlight-1x.png',
-    src: '../img/covers/starlight-2x.png',
+    srcset: starlight1x,
+    src: starlight2x,
   },
   fruitbox: {
-    srcset: '../img/covers/fruitbox-1x.png',
-    src: '../img/covers/fruitbox-2x.png',
+    srcset: fruitbox1x,
+    src: fruitbox2x,
   },
   chego: {
-    srcset: '../img/covers/chego-1x.png',
-    src: '../img/covers/chego-2x.png',
+    srcset: chego1x,
+    src: chego2x,
   },
   ukrain: {
-    srcset: '../img/covers/ukrainian-1x.png',
-    src: '../img/covers/ukrainian-2x.png',
+    srcset: ukrainian1x,
+    src: ukrainian2x,
   },
   mimino: {
-    srcset: '../img/covers/mimino-1x.png',
-    src: '../img/covers/mimino-2x.png',
+    srcset: mimino1x,
+    src: mimino2x,
   },
 };
+
+export default images;
 
 document.addEventListener('DOMContentLoaded', () => {
   Object.keys(images).forEach(className => {
@@ -71,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
       threshold: 0.5,
     }
   );
-
   covers.forEach(cover => {
     observer.observe(cover);
   });

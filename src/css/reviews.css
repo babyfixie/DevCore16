@@ -1,3 +1,21 @@
+@import 'swiper/css';
+
+/*::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #88888811;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}*/
+
 .section-reviews {
   padding-bottom: 64px;
 }
@@ -15,13 +33,15 @@
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
+/*.reviews-list {
+  margin-bottom: 32px;
+}*/
+
 .reviews-list-item {
-  display: flex;
+  flex-direction: column;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-  width: 344px;
-  height: 302px;
 }
 
 .photo-review {
@@ -45,19 +65,62 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+  text-overflow: ellipsis;
 }
 .review-text-wraper {
+  overflow-y: scroll;
+  height: 120px;
 }
-
-.reviews-button-next,
-.reviews-button-prev {
+.reviews-swiper-button {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.reviews-button-prev,
+.reviews-button-next {
+  display: flex;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  background-color: transparent;
+  fill: rgba(250, 250, 250, 1);
+}
+/*.swiper-button-prev,
+.swiper-button-next {
+  top: 94%;
   border: 1px solid rgba(250, 250, 250, 0.5);
   background: transparent;
   border-radius: 60px;
   padding: 14px;
   width: 52px;
   height: 52px;
-  transform: rotate(-180deg);
+  color: #fafafa;
+}
+.swiper {
+  --swiper-navigation-size: 52px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+}
+
+.swiper-button-prev {
+  --svg-icon: url('../img/svg/icons.svg#icon-arrow-left') no-repeat;
+  background: var(--svg-icon) no-repeat center;
+  background-size: contain;
+}
+
+.swiper-theme-color {
+  color: #fafafa;
+}
+.next-btn-icon {
+  fill: #fafafa;
+}
+.swiper-navigation-size {
+  width: 0;
+  height: 0;
 }
 .reviews-swiper-button {
   display: flex;
@@ -65,7 +128,7 @@
   width: 116px;
   height: 52px;
   margin: 32px 114px 0px;
-}
+}*/
 @media screen and (min-width: 375px) {
 }
 

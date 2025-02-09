@@ -91,7 +91,7 @@
   fill: rgba(250, 250, 250, 1);
 }
 .reviews-button-prev.swiper-button-disabled,
-.reviews-button-next.swper-button-disabled {
+.reviews-button-next.swiper-button-disabled {
   fill: rgba(59, 59, 59, 1);
   border: 1px solid rgba(250, 250, 250, 0.2);
 }

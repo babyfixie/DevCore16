@@ -3,11 +3,6 @@ import axios from 'axios';
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
-// swiper element
-const swiperEl = document.querySelector('swiper-container');
-
-const buttonPrev = document.querySelector('.reviews-button-prev');
-const buttonNext = document.querySelector('.reviews-button-next');
 const listReviews = document.querySelector('.reviews-list');
 
 const getReviewsApi = async () => {
@@ -105,40 +100,3 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
     },
   },
 });
-
-//swiper parameters
-// const swiperParams = {
-//   breakpoints: {
-//     320: {
-//       slidesPerGroup: 1,
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 16,
-//     },
-//     1440: {
-//       slidesPerView: 3,
-//       spaceBetween: 16,
-//     },
-//   },
-//   on: {
-//     init() {
-//       // ...
-//     },
-//   },
-// };
-
-// // now we need to assign all parameters to Swiper element
-// Object.assign(swiperEl, swiperParams);
-
-// // and now initialize it
-// swiperEl.initialize();
-
-// buttonNext.addEventListener('click', () => {
-//   swiperEl.swiper.slideNext();
-// });
-
-// buttonPrev.addEventListener('click', () => {
-//   swiperEl.swiper.slidePrev();
-// });

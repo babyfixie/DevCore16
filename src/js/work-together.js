@@ -1,4 +1,23 @@
 import axios from 'axios';
+import footer1x from '../img/work-together/footer-avatar/footer-avatar-mobile1.jpg';
+import footer2x from '../img/work-together/footer-avatar/footer-avatar-mobile2.jpg';
+
+const images = {
+  footer: {
+    srcset: footer2x,
+    src: footer1x,
+  },
+};
+
+export default images;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const imgs = document.querySelectorAll(`.footer-logo`);
+  imgs.forEach(img => {
+    img.srcset = images.footer.srcset;
+    img.src = images.footer.src;
+  });
+});
 
 //get all the elements from DOM
 const reviewForm = document.querySelector('.footer-review-form');

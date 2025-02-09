@@ -1,18 +1,7 @@
-// import Swiper JS
-import Swiper from 'swiper';
-import { Keyboard, Navigation } from 'swiper/modules';
-// import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-// import styles bundle
-import 'swiper/css/bundle';
-
-// import function to register Swiper custom elements
-import { register } from 'swiper/element/bundle';
 import axios from 'axios';
-// register Swiper custom elements
-register();
+
+import Swiper from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 // swiper element
 const swiperEl = document.querySelector('swiper-container');

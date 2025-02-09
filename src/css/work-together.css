@@ -46,6 +46,7 @@
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 
   max-width: 343px;
+  width: 100%;
   height: 44px;
   padding: 0 0 20px 0;
 
@@ -53,9 +54,49 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: #fafafa;
+
+  text-overflow: ellipsis;
+  transition: border-bottom-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-field:hover,
+.input-field:focus {
+  border-bottom-color: rgba(250, 250, 250, 0.5);
 }
 .input-field::placeholder {
   color: rgba(250, 250, 250, 0.6);
+}
+.input-field-error {
+  border-bottom-color: #e74a3b;
+}
+.input-field-succes {
+  border-bottom-color: #3cbc81;
+}
+.email-label-error::after {
+  content: 'Invalid email, try again';
+  display: block;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #e74a3b;
+  margin-top: 4px;
+}
+.input-label-succes::after {
+  content: 'Succes!';
+  display: block;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #3cbc81;
+  margin-top: 4px;
+}
+.message-label-error::after {
+  content: 'Comment has to be filled';
+  display: block;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #e74a3b;
+  margin-top: 4px;
 }
 .footer-send-btn {
   width: 100px;
@@ -68,6 +109,12 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   margin-top: 32px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-send-btn:focus,
+.footer-send-btn:hover {
+  background-color: #e0373f;
 }
 .footer-contacts {
   display: flex;
@@ -84,9 +131,14 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   white-space: nowrap;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   /* на 320 пікселів без цього текст починає перенос на 2 рядок, з цим просто правий падінг зменшується */
 }
-
+.footer-contacts-el:focus,
+.footer-contacts-el:hover {
+  border-color: #fafafa;
+}
 /* -------modal window------- */
 .modal-window-wrapper {
   position: fixed;
@@ -216,12 +268,14 @@
   }
   .input-field {
     width: 390px;
+    max-width: 390px;
     margin-top: 64px;
   }
-  .input-field:first-child {
+  .input-field.email-input {
     margin-right: 32px;
   }
+
   .footer-send-btn {
-    margin-left: 100px;
+    margin-left: 86px;
   }
 }

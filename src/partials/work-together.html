@@ -11,19 +11,25 @@
       let's <span class="footer-heading-red">work</span> <br />
       together
     </h2>
-    <form class="footer-review-form">
-      <input
-        class="input-field"
-        type="email"
-        placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      />
-      <input
-        class="input-field"
-        type="text"
-        placeholder="comments"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      />
+    <form class="footer-review-form" novalidate>
+      <label class="email-label">
+        <input
+          class="input-field email-input" 
+          name="email"
+          type="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          autocomplete="off"
+      /></label>
+      <label class="message-label">
+        <input
+          class="input-field message-input"
+          name="comment"
+          type="text"
+          placeholder="comments"
+          autocomplete="off"
+      /></label>
+
       <button class="footer-send-btn" type="submit">Send</button>
     </form>
     <ul class="footer-contacts">

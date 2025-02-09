@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBackground = document.querySelector(".header-mobile-menu-background");
     const menuLinks = document.querySelectorAll(".header-mobile-menu-link");
     const desktopMenuButton = document.querySelector(".menu");
-    const desktopNav = document.querySelector(".header-navbar");
     const orderButton = document.querySelector(".header-mobile-menu-order-button");
 
     function openMenu() {
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "hidden";
     }
 
-    
+
     function closeMenu() {
         menuBackground.classList.remove("is-open");
         document.body.style.overflow = "";

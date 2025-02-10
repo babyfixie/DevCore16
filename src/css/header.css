@@ -70,11 +70,8 @@
     visibility: visible;
     pointer-events: auto; 
     background-color: rgba(0, 0, 0, 0.5);
-    --transition-duration: 0.5s;
-        --transition-function: ease;
     
-        transition: opacity var(--transition-duration) var(--transition-function),
-            visibility var(--transition-duration) var(--transition-function);
+    
 }
 
 .header-mobile-menu-wrapper {
@@ -91,17 +88,13 @@
     background-image: url(../img/header/glass-effect_mob@1x.png);
     background-size: cover;
     background-repeat: no-repeat;
-    transform: scale(1, 0.5);
+    transform: scale(0.01, 0.01);
+transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .header-mobile-menu-background.is-open .header-mobile-menu-wrapper {
     background-color: rgba(0, 0, 0, 0.5);
-    transform: translateX(0);
-    --transition-duration: 0.5s;
-        --transition-function: ease;
-    
-        transition: opacity var(--transition-duration) var(--transition-function),
-            visibility var(--transition-duration) var(--transition-function);
+    transform: translateX(0);       
 }
 
 .header-mobile-menu-close-button {
@@ -176,6 +169,11 @@
     background-color: #e0373f;
 }
 
+@media screen and (max-height: 530px){
+    .header-mobile-menu-wrapper {
+            padding-top: 100px;
+        }
+}
 
 @media screen and (min-width: 768px) {
     .container {

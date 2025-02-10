@@ -60,8 +60,10 @@ const createNotFound = (message = 'Not found') => {
   const p = document.createElement('p');
   p.textContent = message;
 
-  swiperEl.insertAdjacentElement('afterbegin', p);
+  listReviews.insertAdjacentElement('afterbegin', p);
 };
+
+let isSwiping = false;
 
 getReviews();
 
@@ -97,6 +99,30 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
     1440: {
       slidesPerGroup: 4,
       slidesPerView: 4,
+    },
+  },
+
+  on: {
+    slideChange: () => {
+      if (isSwiping) {
+        document
+          .querySelector('.reviews-button-next')
+          .classList.add('swiper-button-disabled');
+        document
+          .querySelector('.reviews-button-prev')
+          .classList.add('swiper-button-disabled');
+      }
+
+      setTimeout(() => {
+        document
+          .querySelector('.reviews-button-next')
+          .classList.remove('swiper-button-disabled');
+        document
+          .querySelector('.reviews-button-prev')
+          .classList.remove('swiper-button-disabled');
+        reviewsSwiper.navigation.update();
+        isSwiping = false;
+      }, 0);
     },
   },
 });

@@ -215,3 +215,16 @@ img {
     border-radius: 0 24px 24px 0;
   }
 }
+
+.project-swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 100%;
+  flex-shrink: 0;
+}

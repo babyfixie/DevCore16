@@ -33,7 +33,7 @@
       <div class="nickname">jefferson*</div>
       <button class="menu">Menu</button>
 
-      <button class="header-navbar-button">Order the project</button>
+      <a class="header-navbar-button" href="#form-foot"> Order the project </a>
 
       <button class="header-burger-button">
         <svg class="header-burger-icon" width="28" height="28">
@@ -62,11 +62,13 @@
             <a class="header-mobile-menu-link" href="#projects">Projects</a>
           </li>
           <li class="header-mobile-menu-item">
-            <a class="header-mobile-menu-link" href="#FAQ">FAQ</a>
+            <a class="header-mobile-menu-link" href="#faq">FAQ</a>
           </li>
         </ul>
       </nav>
-      <button class="header-mobile-menu-order-button">Order the project</button>
+      <a class="header-mobile-menu-order-button" href="#form-foot">
+        Order the project
+      </a>
     </div>
   </div>
 </header>
@@ -303,12 +305,12 @@
           </div>
         </li>
       </ul>
-      <a class="bnf-btn" href="#footer-form" role="button">Order the project</a>
+      <a class="bnf-btn" href="#form-foot" role="button">Order the project</a>
     </div>
   </div>
 </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
   <div class="container">
     <h2 class="project-title">PROJECTS</h2>
     <div class="swiper project-container">
@@ -460,7 +462,7 @@
   </div>
 </section>
 
-      <section class="faq">
+      <section class="faq" id="faq">
   <div class="container">
     <h2 class="visually-hidden" hidden>FAQ</h2>
     <ul class="faq-list">
@@ -712,7 +714,7 @@
       let's <span class="footer-heading-red">work</span> <br />
       together
     </h2>
-    <form class="footer-review-form" novalidate>
+    <form class="footer-review-form" id="form-foot" novalidate>
       <label class="email-label">
         <input
           class="input-field email-input"

@@ -4,7 +4,6 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 const listReviews = document.querySelector('.reviews-list');
-const swiperElem = document.querySelector('.reviews-swiper-container');
 
 const getReviewsApi = async () => {
   const response = await axios.get(
@@ -24,7 +23,6 @@ const getReviews = async () => {
     }
   } catch (error) {
     createNotFound();
-    alert('Not found');
   }
 };
 
@@ -62,8 +60,10 @@ const createNotFound = (message = 'Not found') => {
   const p = document.createElement('p');
   p.textContent = message;
 
-  swiperElem.insertAdjacentElement('afterbegin', p);
+  listReviews.insertAdjacentElement('afterbegin', p);
 };
+
+let isSwiping = false;
 
 getReviews();
 
@@ -101,6 +101,7 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
       slidesPerView: 4,
     },
   },
+
   on: {
     slideChange: () => {
       if (isSwiping) {

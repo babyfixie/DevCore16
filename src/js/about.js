@@ -1,17 +1,3 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-
-// Accordion
-
-new Accordion('.accordion-container', {
-  duration: 400,
-  showMultiple: true,
-  onOpen: function (currentElement) {
-    console.log(currentElement);
-  },
-});
-
-//======= Swiper
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
@@ -34,13 +20,14 @@ const aboutSwiper = new Swiper('.about-me-swiper', {
   watchOverflow: true,
   loop: true,
   slidesPerView: 2,
-  spaceBetween: 20,
+
   navigation: {
     nextEl: '.about-me-swiper-btn-next',
   },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+    pageUpDown: true,
   },
   mousewheel: true,
   breakpoints: {
@@ -49,49 +36,7 @@ const aboutSwiper = new Swiper('.about-me-swiper', {
     1440: { slidesPerView: 6 },
   },
 });
-// const swiper = new Swiper('.about-me-swiper', {
-//   // Default parameters
-//   loop: true,
-//   centeredSlides: false,
-//   loopAdditionalSlides: 4,
-//   slidesPerView: 2,
-//   spaceBetween: 0,
-//   // Responsive breakpoints
-//   breakpoints: {
-//     // when window width is >= 320px
-//     375: {
-//       slidesPerView: 2,
-//       spaceBetween: 0,
-//     },
-//     // when window width is >= 375px
-//     768: {
-//       slidesPerView: 3,
-//       spaceBetween: 0,
-//     },
-//     // when window width is >= 768px
-//     1440: {
-//       slidesPerView: 6,
-//       spaceBetween: 0,
-//     },
-//   },
-//   centeredSlides: false,
-// //   // loopAdditionalSlides: 1,
-//    navigation: {
-//      nextEl: '.swiper-button-next',
-//      prevEl: '.swiper-button-prev',
-//    },
-//    pagination: {
-//      el: '.swiper-pagination',
-// /    clickable: true,
-//    },
-//    keyboard: {
-//      enabled: true,
-//      onlyInViewport: true,
-//    },
-//    mousewheel: true,
-//  });
 
-// Accordion
 document.addEventListener('DOMContentLoaded', () => {
   const aboutMeItems = document.querySelectorAll('.about-me-item');
 

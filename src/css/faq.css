@@ -142,21 +142,61 @@
 
   .faq-list {
     flex-wrap: wrap;
+    /* flex-direction: row; */
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
     /* justify-content: space-around; */
+    align-items: start;
+    /* align-items: stretch; */
+    /* align-items: baseline; */
+    /* align-content: stretch; */
+    align-content: center;
     width: 1376px;
-    height: 600px;
+    min-height: 650px;
+    /* height: 600px; */
     /* min-height: 600px; */
     row-gap: 32px;
-    align-items: start;
-    column-gap: 88px;
+    /* column-gap: 100px; */
+    /* column-gap: 0px; */
   }
+
   .faq-item {
+    /* flex-grow: 1; */
+    /* flex-shrink: ; */
+    /* flex-basis: ; */
     width: 688px;
   }
+
+  /* .faq-list::not(:nth-child(-n + 3)) { */
+  /* .faq-list::not(:nth-child(4n)) { каждый 4ый*/
+
+  /* .faq-item:not(:nth-child(-n + 1)) {
+      order: (n + 1);
+    } */
+
+  /* .faq-item:nth-child(2) {
+    order: 3;
+  }
+  .faq-item:nth-child(3) {
+    order: 5;
+  }
+  .faq-item:nth-child(4) {
+    order: 2;
+  }
+  .faq-item:nth-child(5) {
+    order: 4;
+  } */
+
+  /* .faq-item:not(:nth-child(2)) {
+    padding-left: 32px;
+  } */
+
   .faq-item-tittle {
     column-gap: normal;
-    /* width: 688px; */
+    width: 656px;
+  }
+  .faq-item-text {
+    width: 656px;
   }
 }

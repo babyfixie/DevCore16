@@ -10,7 +10,7 @@ const swiperProject = new Swiper('.swiper', {
   direction: 'horizontal',
   watchOverflow: true,
   allowTouchMove: true,
-  grabCursor: true,
+  // grabCursor: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

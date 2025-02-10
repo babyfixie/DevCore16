@@ -4,6 +4,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 const listReviews = document.querySelector('.reviews-list');
+const swiperEl = document.querySelector('.reviews-swiper-container');
 
 const getReviewsApi = async () => {
   const response = await axios.get(
@@ -23,6 +24,7 @@ const getReviews = async () => {
     }
   } catch (error) {
     createNotFound();
+    alert('Not found');
   }
 };
 

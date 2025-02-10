@@ -9,7 +9,7 @@
   flex-shrink: 0;
 }
 .about-me {
-  margin-bottom: 96px;
+  margin-bottom: 64px;
 }
 
 .bio {
@@ -190,6 +190,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .about-me {
+    margin-bottom: 96px;
+  }
   .about-me-swiper-wrapper {
     width: 600px;
   }
@@ -204,6 +207,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .about-me {
+    margin-bottom: 164px;
+  }
   .about-me-swiper-wrapper {
     width: 1200px;
   }

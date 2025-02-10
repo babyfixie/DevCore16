@@ -256,6 +256,7 @@
     background-image: url('../img/work-together/footer-bg-desktop.png');
   }
   .footer-container {
+    padding-top: 82px;
     padding-left: 196px;
     padding-right: 196px;
   }

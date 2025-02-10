@@ -14,7 +14,7 @@
 }
 
 .benefits {
-  padding: 32px 0;
+  padding: 0 0 64px;
 }
 
 .bnf-title {
@@ -146,7 +146,7 @@
 
 @media screen and (min-width: 768px) {
   .benefits {
-    padding: 48px 0;
+    padding: 0 0 96px;
   }
 
   .bnf-ul {
@@ -162,7 +162,7 @@
 
 @media screen and (min-width: 1440px) {
   .benefits {
-    padding: 82px 0;
+    padding: 82px 0 164px;
   }
 
   .bnf-cont {

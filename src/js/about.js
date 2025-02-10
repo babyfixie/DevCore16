@@ -2,45 +2,19 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 // Accordion
-new Accordion('.about_me_accordeon', {
-  duration: 400,
-  showMultiple: true,
-  onOpen: function (currentElement) {
-    console.log(currentElement);
-  },
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const aboutMeItems = document.querySelectorAll('.about-me-item');
-
-  aboutMeItems.forEach(item => {
-    const btn = item.querySelector('.about-me-btn');
-    const texts = item.querySelectorAll('.about-me-item-text');
-    const icon = btn.querySelector('.about-me-icon');
-
-    texts.forEach(text => (text.style.display = 'none'));
-
-    btn.addEventListener('click', () => {
-      const isVisible = texts[0].style.display === 'block';
-
-      aboutMeItems.forEach(otherItem => {
-        otherItem.querySelectorAll('.about-me-item-text').forEach(text => {
-          text.style.display = 'none';
-        });
-        otherItem.querySelector('.about-me-icon').style.transform =
-          'rotate(0deg)';
-      });
-
-      texts.forEach(text => {
-        text.style.display = isVisible ? 'none' : 'block';
-      });
-      icon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  // Inicializa el acordeón usando la biblioteca Accordion
+  const accordion = new Accordion('.about-me-list', {
+    duration: 400, // Duración de la animación
+    showMultiple: false, // Permite abrir solo un elemento a la vez
+    openOnInit: [0], // Abre el primer bloque al cargar la página
+    collapse: true, // Asegura que los demás bloques estén cerrados al inicio
   });
 });
 
 //======= Swiper
-// import Swiper JS
+//======= import Swiper JS
 
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';

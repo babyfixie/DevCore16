@@ -4,7 +4,8 @@
 @import 'accordion-js/dist/accordion.min.css';
 
 .about-me {
-  margin-bottom: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .bio {
@@ -77,14 +78,17 @@
   margin: 0 auto;
 }
 
-.about-me-icon {
+.about-me-btn {
   width: 40px;
   height: 40px;
+}
+
+.about-me-icon {
   border: 1px solid rgb(250, 250, 250, 0.2);
   border-radius: 50%;
 
-  fill: rgb(250, 250, 250, 0.5);
-  stroke: none;
+  stroke: rgb(250, 250, 250, 0.4);
+  fill: rgb(250, 250, 250, 0.4);
 }
 
 /*SLider*/

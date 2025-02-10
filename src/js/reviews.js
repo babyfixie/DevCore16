@@ -4,7 +4,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 const listReviews = document.querySelector('.reviews-list');
-const swiperEl = document.querySelector('.reviews-swiper-container');
+const swiperElem = document.querySelector('.reviews-swiper-container');
 
 const getReviewsApi = async () => {
   const response = await axios.get(
@@ -62,7 +62,7 @@ const createNotFound = (message = 'Not found') => {
   const p = document.createElement('p');
   p.textContent = message;
 
-  swiperEl.insertAdjacentElement('afterbegin', p);
+  swiperElem.insertAdjacentElement('afterbegin', p);
 };
 
 getReviews();
@@ -99,6 +99,29 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
     1440: {
       slidesPerGroup: 4,
       slidesPerView: 4,
+    },
+  },
+  on: {
+    slideChange: () => {
+      if (isSwiping) {
+        document
+          .querySelector('.reviews-button-next')
+          .classList.add('swiper-button-disabled');
+        document
+          .querySelector('.reviews-button-prev')
+          .classList.add('swiper-button-disabled');
+      }
+
+      setTimeout(() => {
+        document
+          .querySelector('.reviews-button-next')
+          .classList.remove('swiper-button-disabled');
+        document
+          .querySelector('.reviews-button-prev')
+          .classList.remove('swiper-button-disabled');
+        reviewsSwiper.navigation.update();
+        isSwiping = false;
+      }, 0);
     },
   },
 });

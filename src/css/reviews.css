@@ -1,4 +1,4 @@
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
   background-color: transparent;
 }
 
@@ -12,7 +12,7 @@
 
 ::-webkit-scrollbar {
   width: 0;
-}
+}*/
 
 .section-reviews {
   padding-bottom: 64px;

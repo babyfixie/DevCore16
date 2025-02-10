@@ -1,0 +1,130 @@
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #88888811;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.section-reviews {
+  padding-bottom: 64px;
+}
+
+.reviews-swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.reviews-section-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+.reviews-list {
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.reviews-list-item {
+  flex-shrink: 0;
+  flex-direction: column;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+}
+
+.photo-review {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #000;
+  border-radius: 10px;
+  opacity: 1;
+  margin: 0px 271px 32px 0px;
+}
+.autor-review {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+.review-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  text-overflow: ellipsis;
+}
+.review-text-wraper {
+  overflow-y: scroll;
+  height: 120px;
+}
+.reviews-swiper-button {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 116px;
+  height: 52px;
+  margin: 0 auto;
+}
+.reviews-button-prev,
+.reviews-button-next {
+  display: flex;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  background-color: transparent;
+  fill: rgba(250, 250, 250, 1);
+}
+.reviews-button-prev.swiper-button-disabled,
+.reviews-button-next.swiper-button-disabled {
+  fill: rgba(59, 59, 59, 1);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-button-prev,
+  .reviews-button-next {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+  .section-reviews {
+    padding-bottom: 96px;
+  }
+  .reviews-swiper-button {
+    gap: 20px;
+    width: 156px;
+    height: 68px;
+  }
+  .prev-btn-icon,
+  .next-btn-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-reviews {
+    padding-bottom: 82px;
+  }
+}

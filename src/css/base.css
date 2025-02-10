@@ -5,9 +5,12 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   font-family: 'DM Sans', sans-serif;
   color: #fff;
   background-color: #1c1d20;

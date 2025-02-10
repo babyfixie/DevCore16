@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //======= Swiper
 // import Swiper JS
+
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 

@@ -1,3 +1,16 @@
+.skills-education-carusel {
+  overflow: hidden;
+}
+
+.about-me-swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.about-me-swiper-slide {
+  flex-shrink: 0;
+}
+
 .about-me {
   margin-bottom: 96px;
 }
@@ -185,7 +198,6 @@
   }
   .about-me-swiper-slide {
     height: 200px;
-
     font-size: 20px;
   }
   .about-me-swiper-btn-next-icon {

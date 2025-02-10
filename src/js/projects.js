@@ -20,7 +20,6 @@ import tabvoc2x from '../img/projects/mob-voc-2x.jpg';
 import Swiper from 'swiper';
 import 'swiper/css';
 
-import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {

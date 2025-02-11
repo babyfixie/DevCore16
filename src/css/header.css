@@ -52,26 +52,26 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(20, 20, 20, 0.4);
-    opacity: 0; 
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 
     --transition-duration: 0.5s;
-        --transition-function: ease;
-    
-        transition: opacity var(--transition-duration) var(--transition-function),
-            visibility var(--transition-duration) var(--transition-function);
-   
-} 
+    --transition-function: ease;
+
+    transition: opacity var(--transition-duration) var(--transition-function),
+        visibility var(--transition-duration) var(--transition-function);
+
+}
 
 
 .header-mobile-menu-background.is-open {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto; 
+    pointer-events: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    
-    
+
+
 }
 
 .header-mobile-menu-wrapper {
@@ -89,12 +89,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     transform: scale(0.01, 0.01);
-transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .header-mobile-menu-background.is-open .header-mobile-menu-wrapper {
     background-color: rgba(0, 0, 0, 0.5);
-    transform: translateX(0);       
+    transform: translateX(0);
 }
 
 .header-mobile-menu-close-button {
@@ -112,11 +112,11 @@ transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 .header-mobile-menu-close-icon {
     stroke: #fafafa;
     fill: #fafafa;
-    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-mobile-menu-close-icon:hover,
-.header-mobile-menu-close-icon:focus{
+.header-mobile-menu-close-icon:focus {
     stroke: #ed3b44;
     fill: #ed3b44;
 }
@@ -139,7 +139,7 @@ transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     text-decoration: underline;
     text-underline-offset: 3px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
 }
 
 .header-mobile-menu-link:hover,
@@ -169,24 +169,24 @@ transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     background-color: #e0373f;
 }
 
-@media screen and (max-height: 530px){
+@media screen and (max-height: 530px) {
     .header-mobile-menu-wrapper {
-            padding-top: 100px;
-        }
+        padding-top: 100px;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .container {
-            padding: 0 32px;
-        }
-        
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 32px;
-}
+        padding: 0 32px;
+    }
 
-        .header-burger-button {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+    }
+
+    .header-burger-button {
         display: none;
     }
 
@@ -200,60 +200,92 @@ transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         height: 40px;
     }
 
-            .menu {
-            display: flex;
-            justify-content: center;
-            width: 67px;
-            height: 39px;
-            margin-right: auto;
-            margin-left: auto;
-            background-color: transparent;
-            color: #fafafa;
-            border: none;
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: column;
+        color: #fafafa;
+    }
+
+    .tittle-menu{
+        display: flex;
+        width: 67px;
+        height: 39px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        margin-bottom: 15px; 
+        cursor: pointer;
+    }
+
+    .header-desk-menu-item{
+        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+        .header-desk-menu-item:hover,
+        .header-desk-menu-item:focus
+        {
             text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
-        .header-navbar-button {
-            display: flex;
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: -0.02em;
-            color: #fafafa;
-            background-color: #ed3b44;
-            border: none;
-            border-radius: 60px;
-            padding: 18px 24px;
-            width: 163px;
-            height: 55px;
+                .header-desk-menu-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    align-items: center;
+        
+                    opacity: 0;
+                    visibility: hidden;
+                    max-height: 0;
+                    overflow: hidden;
+        
+                    transition: opacity 0.5s ease,
+                        visibility 0.5s ease,
+                        max-height 0.5s ease-in-out;
+                }
 
-            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
+                .header-desk-menu-list.is-open {
+                    opacity: 1;
+                    visibility: visible;
+                    max-height: 500px;
+                }
 
-    
+
+    .header-navbar-button {
+        display: flex;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+        background-color: #ed3b44;
+        border: none;
+        border-radius: 60px;
+        padding: 18px 24px;
+        width: 163px;
+        height: 55px;
+
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
 
     .header-navbar-button:hover {
         background-color: #e0373f;;
     }
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1440px) {
 
-     .header-mobile-menu-wrapper {
-                top:100px;
-                width: 330px;
-                height: 450px;
-        }
-
-        .header-mobile-menu-wrapper {
-            padding-top: 150px;
-            padding-bottom: 64px;
-            border-radius: 10px;
-        
-        }
+    
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 375px) {
-.header-mobile-menu-wrapper {
+    .header-mobile-menu-wrapper {
         background-image: url(../img/header/glass-effect_mob@2x.png);
 
     }

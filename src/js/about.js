@@ -22,6 +22,29 @@ accordionsList.forEach(function (item) {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const buttons = document.querySelectorAll('.about-me-btn');
+
+  buttons.forEach((button, index) => {
+    const icon = button.querySelector('.about-me-icon');
+    const panel = button.closest('.ac').querySelector('.ac-panel');
+
+    if (index === 0) {
+      panel.classList.add('active');
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      icon.style.transform = 'rotate(180deg)';
+    }
+
+    button.addEventListener('click', function () {
+      panel.classList.toggle('active');
+      icon.style.transform = panel.classList.contains('active')
+        ? 'rotate(0deg)'
+        : 'rotate(180deg)';
+    });
+  });
+});
+
 const aboutMeSwiperBtnNextEl = document.querySelector(
   '.about-me-swiper-btn-next'
 );

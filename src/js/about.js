@@ -9,19 +9,6 @@ new Accordion('.accordion-container-first', {
   openOnInit: [0],
 });
 
-const accordionsList = document.querySelectorAll('.about-me-list');
-accordionsList.forEach(function (item) {
-  const title = item.querySelector('.aboutus-title-accordion');
-  const btnDown = item.querySelector('.ac-trigger');
-  btnDown.addEventListener('mouseenter', function () {
-    title.classList.add('hovered');
-  });
-
-  btnDown.addEventListener('mouseleave', function () {
-    title.classList.remove('hovered');
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.about-me-btn');
 

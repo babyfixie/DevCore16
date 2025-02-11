@@ -1,6 +1,27 @@
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
+import Accordion from 'accordion-js';
+
+new Accordion('.accordion-container-first', {
+  duration: 600,
+  showMultiple: true,
+  openOnInit: [0],
+});
+
+const accordionsList = document.querySelectorAll('.about-me-list');
+accordionsList.forEach(function (item) {
+  const title = item.querySelector('.aboutus-title-accordion');
+  const btnDown = item.querySelector('.ac-trigger');
+  btnDown.addEventListener('mouseenter', function () {
+    title.classList.add('hovered');
+  });
+
+  btnDown.addEventListener('mouseleave', function () {
+    title.classList.remove('hovered');
+  });
+});
+
 const aboutMeSwiperBtnNextEl = document.querySelector(
   '.about-me-swiper-btn-next'
 );
@@ -35,33 +56,4 @@ const aboutSwiper = new Swiper('.about-me-swiper', {
     768: { slidesPerView: 3 },
     1440: { slidesPerView: 6 },
   },
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const aboutMeItems = document.querySelectorAll('.about-me-item');
-
-  aboutMeItems.forEach(item => {
-    const btn = item.querySelector('.about-me-btn');
-    const texts = item.querySelectorAll('.about-me-item-text');
-    const icon = btn.querySelector('.about-me-icon');
-
-    texts.forEach(text => (text.style.display = 'none'));
-
-    btn.addEventListener('click', () => {
-      const isVisible = texts[0].style.display === 'block';
-
-      aboutMeItems.forEach(otherItem => {
-        otherItem.querySelectorAll('.about-me-item-text').forEach(text => {
-          text.style.display = 'none';
-        });
-        otherItem.querySelector('.about-me-icon').style.transform =
-          'rotate(0deg)';
-      });
-
-      texts.forEach(text => {
-        text.style.display = isVisible ? 'none' : 'block';
-      });
-      icon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
-    });
-  });
 });

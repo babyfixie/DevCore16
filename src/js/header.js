@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerButton) {
     headerButton.addEventListener('click', event => {
       event.preventDefault();
-      scrollToSection('work-together');
+      scrollToSection('footer');
     });
   }
 });

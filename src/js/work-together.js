@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//get all the elements from DOM
+// get all the elements from DOM
 const reviewForm = document.querySelector('.footer-review-form');
 
 const emailInput = document.querySelector('.email-input');
@@ -30,7 +30,23 @@ const messageLabel = document.querySelector('.message-label');
 
 const modalWindowWrapper = document.querySelector('.modal-window-wrapper');
 
-//processing submit form
+// function to open the modal and lock scroll
+function openModal() {
+  modalWindowWrapper.classList.add('is-open');
+
+  // lock body scroll
+  document.body.style.overflow = 'hidden';
+}
+
+// function to close the modal and unlock scroll
+function closeModal() {
+  modalWindowWrapper.classList.remove('is-open');
+
+  // unlock body scroll
+  document.body.style.overflow = '';
+}
+
+// processing submit form
 const onSumbitForm = event => {
   event.preventDefault();
 
@@ -88,25 +104,23 @@ const onSumbitForm = event => {
   axios
     .post('https://portfolio-js.b.goit.study/api/requests', formData)
     .then(response => {
-      modalWindowWrapper.classList.add('is-open');
+      openModal();
 
       //close the modal on close btn
       const modalWindowClose = document.querySelector('.modal-close-btn');
-      modalWindowClose.addEventListener('click', () => {
-        modalWindowWrapper.classList.remove('is-open');
-      });
+      modalWindowClose.addEventListener('click', closeModal);
 
       //close the modal on escape btn
       document.addEventListener('keydown', event => {
         if (event.key === 'Escape') {
-          modalWindowWrapper.classList.remove('is-open');
+          closeModal();
         }
       });
 
       //close the modal on bg click
       modalWindowWrapper.addEventListener('click', event => {
         if (event.target === modalWindowWrapper) {
-          modalWindowWrapper.classList.remove('is-open');
+          closeModal();
         }
       });
 

@@ -184,6 +184,7 @@
   .bio_title {
     font-size: 38px;
     line-height: 105%;
+    max-width: 704px;
     padding: 64px 64px 436px 64px;
   }
   .about-me-swiper-wrapper {

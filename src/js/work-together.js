@@ -50,7 +50,7 @@ function closeModal() {
 const onSumbitForm = event => {
   event.preventDefault();
 
-  console.log(emailInput.checkValidity());
+  // console.log(emailInput.checkValidity());
   //check the validity of fields
   if (emailInput.value.trim().length === 0 || !emailInput.checkValidity()) {
     emailLabel.classList.remove('input-label-succes');
